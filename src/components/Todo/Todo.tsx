@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { Dispatch } from 'redux';
-import { removeTodo } from '../../action/todoAction';
+import { completeTodo, removeTodo } from '../../action/todoAction';
 
 
 interface Props {
@@ -18,10 +18,7 @@ const Todo = (props: Props): React.ReactElement => {
      } 
 
      const handleCompleteTodo = (data:Todo) => {
-         dispatch({
-           type: "COMPLETE_TODO",
-           payload:data
-         });
+         dispatch(completeTodo(data));
      }
     const { todo,index } = props
     return (

@@ -14,3 +14,10 @@ export const removeTodo = (todo:Todo) => (dispatch:Dispatch) => {
         payload:todo
     })
 }
+
+export const completeTodo = (todo:Todo) => (dispatch:Dispatch) => {
+    dispatch({
+      type: "COMPLETE_TODO",
+      payload: todo,
+    });
+}
